@@ -18,7 +18,7 @@ a {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.402) rgba(148, 48, 48, 0.2) rgba(167, 67, 67, 0.4));
-    background-image: url('./images/IMG_8108.JPG');
+    background-image: url('/images/IMG_8108.JPG');
     background-size: cover;
 }
 
