@@ -1,0 +1,132 @@
+/* general settings */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+}
+
+
+/* styling the container */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.402) rgba(148, 48, 48, 0.2) rgba(167, 67, 67, 0.4));
+    background-image: url(/images/IMG_8108.JPG);
+    background-size: cover;
+}
+
+
+/* styling the hamburgermenu */
+
+.hamburger-menu {
+    width: 40px;
+    height: 35px;
+    /* background-color: blue; */
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    /* order: 1; */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* display: grid; */
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: green;
+    transition: all 0.8s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-45deg) translate(-8px, 8px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(45deg) translate(-9px, -7px);
+}
+
+
+/* styling the navbar list  */
+
+.navbar {
+    width: 170px;
+    height: 100%;
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    right: -170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 70%;
+    transition: right .8s cubic-bezier(1, 0, 0, 1);
+}
+
+.change {
+    right: 0;
+}
+
+.nav-list {
+    text-align: right;
+}
+
+.nav-item {
+    list-style-type: none;
+    margin: 25px;
+}
+
+.nav-link {
+    font-size: 22px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: chocolate;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: left;
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: right;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* .navbar,
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+} */
