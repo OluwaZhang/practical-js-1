@@ -20,13 +20,14 @@ a {
     /* background: linear-gradient(rgba(0, 0, 0, 0.402) rgba(148, 48, 48, 0.2) rgba(167, 67, 67, 0.4)); */
     background-image: url('../images/IMG_8108.JPG');
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 /* styling the hamburgermenu */
 
 .hamburger-menu {
-    width: 40px;
+    width: 30px;
     height: 35px;
     /* background-color: blue; */
     position: fixed;
@@ -41,9 +42,9 @@ a {
 }
 
 .line {
-    width: 100%;
+    width: 30px;
     height: 3px;
-    background-color: green;
+    background-color: red;
     transition: all 0.8s;
 }
 
@@ -56,7 +57,7 @@ a {
 }
 
 .change .line-3 {
-    transform: rotateZ(45deg) translate(-9px, -7px);
+    transform: rotateZ(45deg) translate(-8px, -8px);
 }
 
 
