@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* body {
+    background-image: url("/images/IMG_8108.JPG");
+} */
+
+.container {
+    /* background-image: url("/images/IMG_8108.JPG"); */
+    background: /* linear-gradient( rgba(0, 0, 0, 0.4), rgba(148, 48, 48, 0.2), rgba(167, 67, 67, 0.4)), */
+    url("/images/IMG_8108.JPG") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-bar {
+    width: 180px;
+    height: 100%;
+    background-color: rgba(24, 21, 21, 0.938);
+    position: fixed;
+    top: 0;
+    right: -180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60% 0 0 60%;
+    transition: right 1s cubic-bezier(0, 0, 0, 1);
+}
+
+.hamburger-menu {
+    width: 25px;
+    height: 20px;
+    /* background-color: green; */
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transition: all 1s;
+}
+
+.new {
+    right: 0;
+}
+
+.new .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 10px);
+}
+
+.new .line-2 {
+    opacity: 0;
+}
+
+.new .line-3 {
+    transform: rotateZ(405deg) translate(1px, -2px);
+}
+
+.nav-item {
+    list-style: none;
+    margin: 20px;
+    text-transform: capitalize;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    /* position: relative;
+    padding: 3px 0; */
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    /* position: absolute;
+    left: 0; */
+    display: block;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link::after {
+    /* bottom: 0; */
+    transform-origin: left;
+}
+
+.nav-link::before {
+    /* top: 0; */
+    transform-origin: right;
+}
